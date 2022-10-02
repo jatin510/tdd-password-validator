@@ -37,4 +37,10 @@ describe('Password generator', () => {
       'Password should contain at least 1 Uppercase letter',
     );
   });
+
+  test('password should be successfully generated', () => {
+    const passwordInput: IPasswordProps = { password: 'Jatin1' };
+    const newPassword = Password.create(passwordInput);
+    expect(newPassword.password).toEqual(passwordInput.password);
+  });
 });
